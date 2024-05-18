@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="Text-Editor">
+    <h1>TEXT EDITOR</h1>
+    </div>
+    <div class="editor-toolbar">
+        <button onclick="execCmd('bold')"><b>B</b></button>
+        <button onclick="execCmd('italic')"><i>I</i></button>
+        <button onclick="execCmd('underline')"><u>U</u></button>
+    
+        <input type="color" name="text-color" id="text-color">
+       
+        <select onchange="execCmdWithArg('fontSize', this.value)">
+            <option value="1">fontSize</option>
+            <option value="1">Small</option>
+            <option value="3">Normal</option>
+            <option value="5">Large</option>
+            <option value="7">Huge</option>
+        </select>
+        <select onchange="execCmdWithArg('fontName', this.value)">
+            <option value="fontName">Fontname</option>
+            <option value="Arial">Arial</option>
+            <option value="Courier">Courier</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Verdana">Verdana</option>
+        </select>
+    
+        
+    </div>
+    <div id="editor" contenteditable="true" class="editor-content"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
